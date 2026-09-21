@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import AppLayout from "./ui/AppLayout.jsx";
 import Movies, { loader as moviesLoader } from "./pages/Movies.jsx";
-import MovieDetails from "./pages/MovieDetails.jsx";
+import MovieDetails,{loader as movieDetailsLoader} from "./pages/MovieDetails.jsx";
 import TvShows from "./pages/TvShows.jsx";
 import TvShowDetails from "./pages/TvShowDetails.jsx";
 import Search from "./pages/Search.jsx";
@@ -31,6 +31,8 @@ const router = createBrowserRouter([
       {
         path: "movies/:movieId",
         element: <MovieDetails />,
+        loader:movieDetailsLoader,
+        errorElement:<Error/>
       },
       {
         path: "tv",
