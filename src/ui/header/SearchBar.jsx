@@ -29,7 +29,7 @@ function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
         />
         <button type="submit" className={styles.searchIconBtn} aria-label="Search">
-          <Search />
+          <Search size={20} />
         </button>
       </form>
 
@@ -38,7 +38,7 @@ function SearchBar() {
         onClick={() => setIsModalOpen(true)}
         aria-label="Open Search"
       >
-        <Search />
+        <Search size={20}/>
       </button>
 
       {isModalOpen && (
@@ -62,7 +62,7 @@ function SearchBar() {
                 autoFocus 
               />
               <button type="submit" className={styles.searchIconBtn} style={{ right: '15px' }} aria-label="Search">
-                <Search />
+                <Search size={20} />
               </button>
             </form>
           </div>
