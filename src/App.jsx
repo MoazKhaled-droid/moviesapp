@@ -4,7 +4,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import AppLayout from "./ui/AppLayout.jsx";
-import Movies from "./pages/Movies.jsx";
+import Movies, { loader as moviesLoader } from "./pages/Movies.jsx";
 import MovieDetails from "./pages/MovieDetails.jsx";
 import TvShows from "./pages/TvShows.jsx";
 import TvShowDetails from "./pages/TvShowDetails.jsx";
@@ -25,6 +25,8 @@ const router = createBrowserRouter([
       {
         path: "movies",
         element: <Movies />,
+        loader: moviesLoader,
+        errorElement: <Error />,
       },
       {
         path: "movies/:movieId",
