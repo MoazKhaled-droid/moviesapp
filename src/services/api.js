@@ -28,7 +28,7 @@ export const getMovieDetails = async (movieId) => {
     throw new Error("Movie ID is required");
   }
   return await fetchData(
-    `/movie/${movieId}?api_key=${API_KEY}&append_to_response=recommendations`,
+    `/movie/${movieId}?api_key=${API_KEY}&append_to_response=recommendations,reviews`,
     "Failed to load movie details",
   );
 };
@@ -38,7 +38,7 @@ export const getTvShowDetails = async (tvId) => {
     throw new Error("TV Show ID is required");
   }
   return await fetchData(
-    `/tv/${tvId}?api_key=${API_KEY}&append_to_response=recommendations`,
+    `/tv/${tvId}?api_key=${API_KEY}&append_to_response=recommendations,reviews`,
     "Failed to load TV show",
   );
 };
