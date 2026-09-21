@@ -16,9 +16,9 @@ export const getNowPlayingMovies = async (page) => {
   );
 };
 
-export const getNowPlayingTvShows = async () => {
+export const getNowPlayingTvShows = async (page) => {
   return await fetchData(
-    `/tv/on_the_air?api_key=${API_KEY}`,
+    `/tv/on_the_air?api_key=${API_KEY}&page=${page}`,
     "Failed to load TV shows",
   );
 };
@@ -43,12 +43,12 @@ export const getTvShowDetails = async (tvId) => {
   );
 };
 
-export const getSearchResults = async (query) => {
+export const getSearchResults = async (query, page) => {
   if (!query) {
     throw new Error("Search query is required");
   }
   return await fetchData(
-    `/search/multi?api_key=${API_KEY}&query=${encodeURIComponent(query)}`,
+    `/search/multi?api_key=${API_KEY}&query=${encodeURIComponent(query)}&page=${page}`,
     "Failed to load search results",
   );
 };

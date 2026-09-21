@@ -13,7 +13,7 @@ function SearchBar() {
     if (!query.trim()) return;
     
     navigate(`/search?q=${encodeURIComponent(query)}`);
-    
+    setQuery("")
     setIsModalOpen(false);
   };
 
