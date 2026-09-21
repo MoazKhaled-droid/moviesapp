@@ -9,9 +9,9 @@ const fetchData = async (endpoint, errorMessage) => {
   return response.json();
 };
 
-export const getNowPlayingMovies = async () => {
+export const getNowPlayingMovies = async (page) => {
   return await fetchData(
-    `/movie/now_playing?api_key=${API_KEY}`,
+    `/movie/now_playing?api_key=${API_KEY}&page=${page}`,
     "Failed to load  movies",
   );
 };

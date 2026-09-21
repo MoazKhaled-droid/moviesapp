@@ -2,12 +2,14 @@ import { useLoaderData } from "react-router-dom";
 import { getNowPlayingMovies } from "../services/api";
 
 export default function Movies() {
-  const movies = useLoaderData()
-  console.log(movies.results)
+  const { results, page, total_pages: totalPages } = useLoaderData();
+  console.log(results, page, totalPages);
   return <div>Movies</div>;
 }
 
-export async function loader() {
-  const movies = await getNowPlayingMovies();
+export async function loader({ request }) {
+  const url = new URL(request.url);
+  const page = url.searchParams.get("page") || 1;
+  const movies = await getNowPlayingMovies(page);
   return movies;
 }
