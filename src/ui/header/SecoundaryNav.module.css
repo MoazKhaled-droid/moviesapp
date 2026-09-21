@@ -1,0 +1,64 @@
+.secondaryNav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wishlistLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.wishlistLink:hover {
+  color: var(--text-primary);
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: var(--accent-primary);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aiButton {
+  background-color: var(--accent-primary);
+  color: #000 !important;
+  font-weight: 600;
+  font-size: var(--text-lg);
+    width: 30px;
+    height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.aiButton:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .secondaryNav {
+    gap: 0.8rem;
+  }
+  .wishlistLink span:not(.badge) {
+    display: none; /* إخفاء النص وترك الأيقونة في الموبايل */
+  }
+}

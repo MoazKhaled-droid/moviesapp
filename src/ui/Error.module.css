@@ -1,0 +1,50 @@
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+}
+
+.errorContent {
+  max-width: 600px;
+}
+
+.errorStatus {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-regular);
+  margin-bottom: 1rem;
+}
+
+.errorStatus b {
+  font-weight: var(--font-bold);
+}
+
+.grayText {
+  color: var(--text-secondary);
+}
+
+.errorMessage {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  margin-bottom: 2rem;
+}
+
+.errorButton {
+  background-color: var(--accent-blue); 
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.errorButton:hover {
+  opacity: 0.9;
+}

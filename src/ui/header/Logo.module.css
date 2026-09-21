@@ -1,0 +1,16 @@
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  letter-spacing: -0.5px;
+}
+
+.cine {
+  color: var(--accent-primary); /* الأصفر */
+}
+
+.vault {
+  color: var(--text-primary);
+}
