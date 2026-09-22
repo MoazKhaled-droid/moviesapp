@@ -7,10 +7,6 @@ const IMAGE_BASE_URL = import.meta.env.VITE_IMAGES_BASE_URL;
 export default function Card({ item, type }) {
   const navigate = useNavigate();
 
-  /* =========================================================================
-     [LOGIC COMMENTED OUT FOR CONTEXT]
-     قم بإلغاء التعليق عن هذا الكود بعد إنشاء الـ context 
-  ========================================================================= */
 
   const { wishList, addToWishList, removeFromWishList } = useWishList();
 
@@ -29,7 +25,6 @@ export default function Card({ item, type }) {
     removeFromWishList(item.id);
   };
 
-  /* ========================================================================= */
 
   const handleNavigate = () => {
     const path = type === "movie" ? `/movies/${item.id}` : `/tv/${item.id}`;
