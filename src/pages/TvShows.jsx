@@ -1,12 +1,24 @@
 import { useLoaderData } from "react-router-dom";
 import { getNowPlayingTvShows } from "../services/api";
+import MainPageContainer from "../ui/MainPageContainer";
+import HeroSection from "../features/media/HeroSection";
+import List from "../features/media/List";
+import Pagination from "../features/media/Pagination";
 
 export default function TvShows() {
-  const { results, page, total_pages: totalPages } = useLoaderData();
-  console.log(results, page, totalPages);
-  
+  const { results, total_pages: totalPages } = useLoaderData();
+
   return (
-    <div>TvShows</div>
+    <MainPageContainer>
+      <HeroSection item={results[0]} type="tv" />
+      <List
+        count={results.length}
+        list={results}
+        title="Now Plaing"
+        type="tv"
+      />
+      <Pagination totalPages={totalPages} />
+    </MainPageContainer>
   );
 }
 
