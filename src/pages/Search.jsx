@@ -3,7 +3,7 @@ import { getSearchResults } from "../services/api";
 
 export default function Search() {
   const { results, page, total_pages: totalPages, query } = useLoaderData();
-  console.log("Query:", query, "Results:", results, "page",page,"total pages",totalPages);
+  console.log( query,  results, page,totalPages);
   
   return (
     <div>Search</div>
