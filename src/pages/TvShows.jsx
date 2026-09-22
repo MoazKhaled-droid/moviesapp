@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { getNowPlayingTvShows } from "../services/api";
+import { getNowPlayingTvShows } from "../services/tmdbApi";
 import MainPageContainer from "../ui/MainPageContainer";
 import HeroSection from "../features/media/HeroSection";
 import List from "../features/media/List";

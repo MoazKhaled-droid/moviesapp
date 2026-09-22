@@ -1,0 +1,143 @@
+.heroContainer {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 40px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 10, 15, 1) 15%, rgba(10, 10, 15, 0.8) 50%, rgba(10, 10, 15, 0.1) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.posterWrapper {
+  flex-shrink: 0;
+}
+
+
+
+.poster {
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+@media (max-width:720px) {
+    .posterWrapper,.poster{
+        display: none;
+    }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #FFFFFF;
+}
+
+.badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.typeBadge {
+  background-color: var(--accent-blue);
+  color: var(--text-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+}
+
+.genreText {
+  color: var(--accent-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.title {
+  font-family: var(--font-secondary);
+  font-size: clamp(var(--text-base), 2vw + 1rem, var(--text-4xl));
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+.meta {
+  display: flex;
+  gap: 15px;
+  font-size: var(--text-base);
+  color: #FFFFFF;
+  align-items: center;
+}
+
+.rating {
+  color: var(--accent-primary);
+  font-weight: var(--font-bold);
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.wishBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wishBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.activeWish {
+  background-color: rgba(229, 57, 53, 0.2);
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+.trailerBtn {
+  background-color: var(--accent-primary);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trailerBtn:hover {
+  background-color: #e6b624;
+}

@@ -2,7 +2,6 @@ import Card from './Card';
 import styles from './List.module.css';
 
 export default function List({ list, type, count, title }) {
-  // تحديد العنوان الافتراضي لو لم يتم تمريره
   const headerTitle = title || (type === 'movie' ? 'Movies' : 'TV Shows');
 
   return (
@@ -20,7 +19,7 @@ export default function List({ list, type, count, title }) {
             releaseDate: item.release_date || item.first_air_date,
           };
 
-          return <Card key={item.id} item={normalizedItem} type={type} />;
+          return <Card key={item.id} item={normalizedItem} type={type || item["media_type"]}  />;
         })}
       </div>
     </div>

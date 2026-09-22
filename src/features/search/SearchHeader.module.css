@@ -1,0 +1,29 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  letter-spacing: 1.5px;
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+}
+
+.queryTitle {
+  color: var(--text-primary);
+  font-family: var(--font-secondary);
+  font-size: var(--text-4xl);
+  margin: 0;
+  line-height: var(--leading-none);
+}
+
+.resultsCount {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-regular);
+}

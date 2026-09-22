@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { getNowPlayingMovies } from "../services/api";
+import { getNowPlayingMovies } from "../services/tmdbApi";
 import HeroSection from "../features/media/HeroSection";
 import List from "../features/media/List";
 import Pagination from "../features/media/Pagination";

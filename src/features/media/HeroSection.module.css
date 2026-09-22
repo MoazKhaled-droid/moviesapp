@@ -46,14 +46,14 @@
 }
 
 .title {
-  font-size: var(--text-4xl);
+ font-size: clamp(var(--text-base), 2vw + 1rem, var(--text-4xl));
   margin: 0 0 10px 0;
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
 }
 
 .overview {
-  max-width: 60%;
+  width: 100%;
   font-size: var(--text-sm);
   margin-bottom: 15px;
   line-height: var(--leading-relaxed);
