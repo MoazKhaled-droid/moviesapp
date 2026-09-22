@@ -5,18 +5,27 @@ import {
 } from "react-router-dom";
 import AppLayout from "./ui/AppLayout.jsx";
 import Movies, { loader as moviesLoader } from "./pages/Movies.jsx";
-import MovieDetails, { loader as movieDetailsLoader } from "./pages/MovieDetails.jsx";
+import MovieDetails, {
+  loader as movieDetailsLoader,
+} from "./pages/MovieDetails.jsx";
 import TvShows, { loader as tvShowsLoader } from "./pages/TvShows.jsx";
-import TvShowDetails, { loader as tvShowDetailsLoader } from "./pages/TvShowDetails.jsx";
+import TvShowDetails, {
+  loader as tvShowDetailsLoader,
+} from "./pages/TvShowDetails.jsx";
 import Search, { loader as searchLoader } from "./pages/Search.jsx";
 import WishList from "./pages/WishList.jsx";
 import AiAssistant from "./pages/AiAssistant.jsx";
 import Error from "./ui/Error.jsx";
+import { WishListProvider } from "./contexts/wishListContext.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout />,
+    element: (
+      <WishListProvider>
+        <AppLayout />
+      </WishListProvider>
+    ),
     errorElement: <Error />,
     children: [
       {

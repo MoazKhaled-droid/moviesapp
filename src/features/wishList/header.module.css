@@ -1,0 +1,36 @@
+.headerContainer {
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.title {
+  font-size: var(--text-4xl);
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: var(--text-sm);
+}
+
+.total {
+  color: var(--text-secondary);
+}
+
+.badgeMovie {
+  background-color: var(--accent-blue);
+  color: var(--text-primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: var(--font-medium);
+}
+
+.badgeTv {
+  background-color: var(--accent-purple);
+  color: var(--text-primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: var(--font-medium);
+}
